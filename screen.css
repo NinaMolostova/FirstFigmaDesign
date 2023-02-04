@@ -16,13 +16,11 @@ h2 {
 
 /*Connecting*/
 .Connecting {
+    box-sizing: border-box;
     position: relative;
-    margin-left: auto;
-    margin-right: 10.5%;
+    margin-right: 10%;
+    margin-left: 10%;
     text-align: justify;
-    text-justify: inter-word;
-    width: 381px;
-    height: 322px;
     padding-top: 3px;
     padding-right: 20px;
 
@@ -82,14 +80,11 @@ h2 {
 .card {
     border: 1px solid #5E5E5E28;
     border-radius: 14px;
-    width: 336px;
-    height: 340px;
     margin-right: 22px;
-    padding: 35px 48px;
+    padding: 20px 30px;
     box-sizing: border-box;
     box-shadow: -6px 12px 24px 2px #92A5B824;
-    transition: all 3s;
-
+    transition: box-shadow 3s;
 }
 
 .card:hover {
@@ -221,63 +216,61 @@ h2 {
     color: #5D5B70;
 }
 
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-        margin-bottom: 35px;
-    }
-
-    .card-wrapper {
-        display: block;
-
-    }
-}
 /* feature cards */
 
 .feature-background {
     background: linear-gradient(0deg, rgba(241, 246, 253, 0.03) 12%, rgba(241, 246, 253, 1) 26%, rgba(241, 246, 253, 1) 60%, rgba(255, 255, 255, 1) 100%);
 }
 
-.feature-card {
+.feature-card-wrapper {
+    padding: 0 8%;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.feature-card {
+    padding: 40px;
+    width: 35%;
     border-radius: 14px;
-    height: 182px;
-    margin-bottom: 40px;
     background: #FFFFFF;
+}
+
+.feature-card-header {
+    display: flex;
+    position: absolute;
 }
 .feature-card:hover {
     box-shadow: 14px 22px 52px -12px rgba(127, 127, 127, 0.13);
 }
-.feature-text-wrapper {
-    padding-top: 46px;
 
-}
 /* end of feature cards */
 
 /* feature content */
 
 .feature-title {
     color: #2F2C4A;
-    margin: 0;
-    margin-bottom: 14px;
     font-size: 24px;
     font-weight: bold;
     font-family: inter, sans-serif;
+    margin: 0;
 }
 
+
 .feature-content {
+    position: relative;
     color: #656464;
     font-size: 16px;
-    margin: 0;
-    margin-right: 75px;
+    margin-top: 39px;
+    margin-left: 100px;
 }
+
 /* end of feature content */
 
 
 /* start of feature icons */
 .icon-wrapper {
-    padding-top: 40px;
-    padding-left: 40px;
     padding-right: 36px;
 }
 
@@ -286,21 +279,25 @@ h2 {
     width: 66px;
     height: 66px;
 }
+
 .red-people {
     background-image: url("photos/2 icon.svg");
     width: 66px;
     height: 66px;
 }
+
 .yellow-icon {
     background-image: url("photos/3 icon.svg");
     width: 66px;
     height: 66px;
 }
+
 .blue-icon {
     background-image: url("photos/4 icon.svg");
     width: 66px;
     height: 66px;
 }
+
 .red-icon {
     background-image: url("photos/5 icon.svg");
     width: 66px;
@@ -312,19 +309,8 @@ h2 {
     width: 66px;
     height: 66px;
 }
-.feature-card-wrapper {
-    padding: 0 12%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-@media (max-width: 1488px){
-    .feature-card {
-        width: 482px;
 
-    }
-}
 /* end of feature card */
 
 /* start of buttons triada */
@@ -362,6 +348,7 @@ h2 {
     text-decoration: none;
     font-weight: 500;
 }
+
 /* end of buttons triada */
 
 /* Valuable members card */
@@ -382,8 +369,9 @@ h2 {
     width: 179px;
     height: 226px;
     background: #FFFFFF;
-        box-shadow: 14px 22px 52px -12px rgba(127, 127, 127, 0.13);
+    box-shadow: 14px 22px 52px -12px rgba(127, 127, 127, 0.13);
 }
+
 .member-card:hover {
     box-shadow: 14px 22px 52px -12px rgba(127, 127, 127, 0.13);
 }
@@ -393,6 +381,7 @@ h2 {
     font-family: Inter, sans-serif;
     text-align: center;
 }
+
 .member-card-title {
     font-size: 16px;
     font-weight: bold;
@@ -407,6 +396,7 @@ h2 {
     padding-left: 21px;
     display: flex;
 }
+
 /* footer navigation */
 
 .footer-nav {
@@ -415,15 +405,14 @@ h2 {
     right: 0;
     background-color: #2B2B39;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding-top: 41px;
+    flex-direction: column;
 }
 
 .footer-list {
     font-size: 12px;
     font-weight: 200;
-    padding-right: 87px;
 }
 
 .list-title {
@@ -431,6 +420,7 @@ h2 {
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: 500;
+    margin-top: 0;
 }
 
 .footer-nav a {
@@ -441,15 +431,21 @@ h2 {
     padding-bottom: 20px;
 
 }
+
 .list-wrapper {
     display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
 .subscribe-article {
     color: #FFFFFF;
-    width: 339px;
-    height: 218px;
     position: relative;
-    text-align: justify;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
 }
 
 .email-form {
@@ -458,9 +454,11 @@ h2 {
     display: flex;
     justify-content: flex-end;
 }
+
 .email-form:focus-within {
     outline: 1px solid #FFFFFF;
 }
+
 .email-info {
     font-family: Inter, sans-serif;
     padding-top: 18px;
@@ -468,6 +466,7 @@ h2 {
     text-align: start;
     font-size: 10px;
 }
+
 label[for="email"] {
     visibility: hidden;
     opacity: 0;
@@ -480,7 +479,6 @@ label[for="email"] {
     height: 48px;
     width: 100%;
     border: none;
-    outline: none;
     padding-left: 24px;
 }
 
@@ -504,4 +502,164 @@ label[for="email"] {
 
 .social-logos img {
     margin-left: 8px;
+}
+@media (max-width: 1020px) {
+    .feature-card {
+        width: 100%;
+    }
+
+}
+@media (max-width: 640px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .title {
+        gap: 20px;
+    }
+
+    .title,
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .Connecting {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+    .discover-button {
+        position: static;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 35px;
+        padding: 15px;
+        height: auto;
+    }
+
+    .card-wrapper {
+        display: block;
+        padding: 15px 25px 0;
+        margin: 0;
+    }
+
+    .feature-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 3%;
+        min-height: 120px;
+        height: auto;
+    }
+
+    .feature-card:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .feature-card-wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .feature-card-header {
+        display: flex;
+        position: static;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        padding-right: 8px;
+    }
+
+    .feature-icon {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-content {
+        font-size: 14px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .main{
+        margin-top: 40px;
+    }
+    .member-button {
+        padding: 25px;
+        font-size: 16px;
+    }
+    .member-switch-wrapper {
+        font-size: 20px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .active-button {
+        width: auto;
+        margin: 0;
+        font-size: 16px;
+    }
+    .member-icon {
+        padding-left: 0;
+    }
+    .valuable-teamCard {
+        padding: 0;
+        justify-content: space-evenly;
+    }
+    .member-card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        height: auto;
+        width: 35vw;
+        min-width: 120px
+    }
+    .team-group {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .member-card-title {
+        font-size: 12px;
+    }
+    .member-text-card {
+        margin: 0;
+    }
+    .img-members {
+        width:100px;
+    }
+
+    .subscribe-article {
+        margin: 9px 0;
+    }
+    .list-title {
+        margin-top: 9px;
+    }
+    .footer-logos {
+        padding: 0 5%;
+    }
+    .footer-info {
+        font-size: 12px;
+        width: min-content;
+    }
+
+    .netbook {
+        width: 100px;
+    }
+    .social-logos img {
+        width: 24px;
+    }
 }
