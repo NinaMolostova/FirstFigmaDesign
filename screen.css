@@ -20,7 +20,6 @@ h2 {
     position: relative;
     margin-right: 10%;
     margin-left: 10%;
-    text-align: justify;
     padding-top: 3px;
     padding-right: 20px;
 
@@ -76,7 +75,9 @@ h2 {
     margin-left: 9.3%;
     margin-top: 45px;
 }
-
+.card-group {
+    display: flex;
+}
 .card {
     border: 1px solid #5E5E5E28;
     border-radius: 14px;
@@ -356,9 +357,9 @@ h2 {
 .valuable-teamCard {
     padding: 0 12% 84px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 44px;
+    gap: 50px;
 }
 
 .member-card {
@@ -396,18 +397,20 @@ h2 {
     padding-left: 21px;
     display: flex;
 }
-
+.team-group {
+    display: flex;
+    gap: 50px;
+}
 /* footer navigation */
 
 .footer-nav {
-    padding: 0 12%;
+    padding: 41px 12% 0;
     left: 0;
     right: 0;
     background-color: #2B2B39;
     display: flex;
     justify-content: space-between;
-    padding-top: 41px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .footer-list {
@@ -434,12 +437,15 @@ h2 {
 
 .list-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
     gap: 50px;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+.list-wrapper-group {
+    display: flex;
+    gap: 50px;
+}
 .subscribe-article {
     color: #FFFFFF;
     position: relative;
@@ -499,7 +505,9 @@ label[for="email"] {
     height: 96px;
     background: #20202D;
 }
-
+.social-logos {
+    display: flex;
+}
 .social-logos img {
     margin-left: 8px;
 }
@@ -507,7 +515,50 @@ label[for="email"] {
     .feature-card {
         width: 100%;
     }
+    .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 45px;
+    }
+    .card {
+        margin: 0;
+    }
+    .card-group {
+        display: flex;
+        gap: 20px;
 
+    }
+    .Connecting {
+        padding-top: 40px;
+        padding-right: 0;
+    }
+    .discover-button {
+        position: static;
+
+    }
+    .valuable-teamCard {
+        display: flex;
+        gap: 28px;
+
+    }
+    .list-wrapper {
+        margin-right: 50px;
+    }
+    .list-wrapper-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .member-card {
+        width: 142px;
+        justify-content: center;
+    }
+    .team-group {
+        gap: 28px;
+    }
+    .img-members {
+        width: 100px;
+    }
 }
 @media (max-width: 640px) {
     * {
@@ -537,6 +588,10 @@ label[for="email"] {
     }
     .discover-button {
         position: static;
+    }
+    .card-group {
+        display: flex;
+        flex-wrap: wrap;
     }
     .card {
         width: 100%;
@@ -632,6 +687,14 @@ label[for="email"] {
         flex-direction: column;
         row-gap: 10px;
     }
+    .list-wrapper-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .list-wrapper {
+        display: flex;
+    }
     .member-card-title {
         font-size: 12px;
     }
@@ -644,6 +707,10 @@ label[for="email"] {
 
     .subscribe-article {
         margin: 9px 0;
+    }
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
     }
     .list-title {
         margin-top: 9px;
@@ -658,6 +725,9 @@ label[for="email"] {
 
     .netbook {
         width: 100px;
+    }
+    .social-logos {
+        display: block;
     }
     .social-logos img {
         width: 24px;
